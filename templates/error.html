@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+Error!
+
+{% endblock %}
+
+{% block body %}
+
+<h1 class="text-blue center white-bubble" style="color: orange; margin-top: 40px; background-color: #73E9;">{{ header }}</h1>
+
+<h3 class="bg-blue center">{{ message }}</h3>
+
+<form class="text-blue center" style="width: 25%; margin: 0 auto;; border-radius: 5px;" action="{{ url_for('error') }}">
+
+  <button type="submit" class="btn btn-primary btn-block">Try Again</button>
+
+</form>
+
+{% endblock %}
