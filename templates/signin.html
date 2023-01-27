@@ -1,0 +1,32 @@
+{% extends "layout.html" %} {% block title %} F.R.I.E.N.D.S! {% endblock %} {%
+block body %}
+<h1 class="bg-blue center welcome-title white-bubble">
+  Welcome to F.R.I.E.N.D.S!
+</h1>
+
+<form
+  class="center"
+  action="{{ url_for('signin') }}"
+  method="post"
+  style="width: 30%; margin: auto auto"
+  autocomplete="off"
+>
+  <div class="bg-blue" style="font-size: 30px; font-weight: bold">Username</div>
+  <input
+    type="text"
+    class="form-control length"
+    name="username"
+    placeholder="Enter Username Here (Max: 10 Chars)"
+    maxlength="10"
+  />
+  <small id="userHelp" style="display: default; color: white" class="form-text">
+    <em
+      >Enter a unique username to surf through the wonders of F.R.I.E.N.D.S!</em
+    >
+  </small>
+  <button type="submit" class="btn btn-primary" style="margin-top: 5px">
+    Submit
+  </button>
+</form>
+
+{% endblock %}
